@@ -9,7 +9,7 @@ interface WeatherError {
 
 async function fetcher(loc: string): Promise<ForecastWeather> {
   const key = import.meta.env.VITE_WEATHER_API_KEY;
-  const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${loc}&days=4`);
+  const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${loc}&days=4`);
   const json = await res.json();
 
   if (res.status === 400) {
