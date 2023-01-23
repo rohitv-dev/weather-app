@@ -27,7 +27,7 @@ function WeatherCard({ data }: WeatherCardProps) {
         <div className="flex text-center overflow-hidden">
           {data.forecast.forecastday.map((forecast) => {
             return (
-              <div key={forecast.date_epoch} className="card card-bordered m-2 mx-auto hover:border-white">
+              <div key={forecast.date_epoch} className="card card-bordered mx-2 hover:border-white">
                 <div className="card-body p-2">
                   <span>{forecast.date}</span>
                   <img src={forecast.day.condition.icon} height={30} width={30} />
@@ -36,11 +36,6 @@ function WeatherCard({ data }: WeatherCardProps) {
                     <span className="font-semibold">{forecast.day.mintemp_c}</span>
                   </div>
                 </div>
-                {/* <div className="flex">
-                  {forecast.hour.map((hour) => {
-                    return <div key={hour.time_epoch}>{hour.time}</div>;
-                  })}
-                </div> */}
               </div>
             );
           })}

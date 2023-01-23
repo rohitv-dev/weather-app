@@ -1,7 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Fragment, useState } from "react";
-import { Tab } from "@headlessui/react";
-import axios, { AxiosError } from "axios";
+import { useState } from "react";
 import WeatherCard from "./components/WeatherCard";
 
 interface WeatherError {
